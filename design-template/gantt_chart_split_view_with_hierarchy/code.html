@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#c2c6d8","outline":"#737687","on-tertiary":"#ffffff","status-todo":"#64748B","surface-container-lowest":"#ffffff","on-surface":"#0a1c34","error":"#ba1a1a","surface-container-high":"#dfe8ff","inverse-primary":"#b3c5ff","tertiary":"#005d7a","primary-fixed-dim":"#b3c5ff","surface-bg":"#F6F8FC","status-overdue":"#EF4444","border-subtle":"#D8E2F0","surface":"#f9f9ff","surface-container":"#e7eeff","on-tertiary-container":"#e4f4ff","secondary-container":"#fe9317","tertiary-container":"#00779c","on-primary-fixed-variant":"#003fa5","tertiary-fixed-dim":"#6fd2ff","on-error-container":"#93000a","on-primary-fixed":"#001849","surface-dim":"#cadbfc","on-tertiary-fixed-variant":"#004d66","on-secondary-fixed":"#2e1500","background":"#f9f9ff","surface-container-highest":"#d6e3ff","inverse-on-surface":"#ecf0ff","on-primary":"#ffffff","surface-tint":"#0054d7","secondary-fixed-dim":"#ffb778","secondary-fixed":"#ffdcc1","on-secondary":"#ffffff","on-secondary-container":"#643600","primary":"#004dc5","status-progress":"#0B63F6","primary-container":"#0b63f6","on-tertiary-fixed":"#001e2b","on-surface-variant":"#424655","tertiary-fixed":"#c0e8ff","primary-fixed":"#dbe1ff","on-background":"#0a1c34","surface-container-low":"#f0f3ff","on-secondary-fixed-variant":"#6c3a00","on-primary-container":"#f0f1ff","secondary":"#8e4e00","on-error":"#ffffff","surface-bright":"#f9f9ff","surface-variant":"#d6e3ff","error-container":"#ffdad6","status-done":"#10B981","surface-card":"#FFFFFF","inverse-surface":"#21314a","blue-800":"#073AB5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-xxs":"0.25rem","space-xs":"0.5rem","space-2xl":"3rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-lg":"1.5rem","space-sm":"0.75rem","margin-tablet":"1.5rem","space-md":"1rem","gutter":"1rem","space-xl":"2rem"},"fontFamily":{"display":["Inter"],"body-sm":["Inter"],"caption":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"]},"fontSize":{"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"caption":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-bg font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Orange Cat Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xyt8ipvX7qqGNMQcPk16SuHPCmii55c17s0JPlXQrPmDFH2erT6fkLM6TRjjntEmsWphhnwS0EXshucbgGwb6criNV6VUbYc5MwtqxJ-bjJBXahgMbRJqx5PV3WVyDn7Bmb3Y7975QiTh_h4-qgILpQLkdq0MwKOK0DGoAKlFGD50pfFYaQ6H65TYiBgF3tbbzT302XN2HWYMgU_yCNqF-q1Rvs7yP17gPyIK2pfxBTCmZ9KoXcymyzA"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">Orange Cat</span><span class="font-caption text-caption text-on-surface-variant">Team Workspace</span></div></div><button aria-label="Switch workspace" class="p-space-xxs rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">unfold_more</span></button></div><div class="px-space-md py-space-xs"><div class="w-full flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-status-progress"></span><span class="font-label-md text-label-md text-on-surface truncate">Main Engineering Hub</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div><div class="px-space-md mt-space-sm"><div class="flex items-center justify-between px-space-xs mb-space-xxs"><span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">โปรเจกต์ (Projects)</span><button aria-label="Add project" class="text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span></button></div><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-surface-container-high text-primary font-title-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="kanban-board" href="#"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-body-sm text-body-sm">Website Redesign Q4</span></div><span class="font-caption text-caption bg-surface-container px-space-xxs py-0.5 rounded text-on-surface-variant">12</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="list-view" href="#"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-body-sm text-body-sm">Mobile App V1</span></div><span class="font-caption text-caption bg-surface-container px-space-xxs py-0.5 rounded text-on-surface-variant">8</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="timeline-view" href="#"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-body-sm text-body-sm">Brand Refresh</span></div><span class="font-caption text-caption bg-surface-container px-space-xxs py-0.5 rounded text-on-surface-variant">5</span></a></nav></div><div class="px-space-md mt-space-md"><div class="flex items-center px-space-xs mb-space-xxs"><span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">การจัดการ (Management)</span></div><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-surface-container-high text-primary font-title-md rounded-lg"><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="members-management" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm">สมาชิกทีม (Members)</span></a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="workspace-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm">ตั้งค่าเวิร์กสเปซ</span></a></nav></div></div><div class="p-space-md bg-surface-card shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQfXVhiaOdM9V6a8BNx2dTgH9iGWoZ4Y2Qq6yHaaN7YOohqm8Mc46YA4RhRm6imztcw7Dv2Ereik7rQ-qeeVVg58s6r4Ri0pejDtVPvHBN58wGHuk-xDbjY1_aXqACTdVl47RCHeHKwa8HTETD1XtiUqR4X79xRU4iMbOhovK_Gcu5CVTFtbxj_ah83MkM7tWJEw8JKgJ3s53T5yhIrLaiClri43SiT3TUcGY7zNa6HtE8VF7EOk"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Somchai Dech</span><div class="flex items-center gap-space-xxs"><span class="font-caption text-caption bg-secondary-fixed text-on-secondary-fixed px-space-xxs rounded-full font-bold">Admin</span><span class="font-caption text-caption text-on-surface-variant">ออนไลน์</span></div></div></div><button aria-label="Profile Options" class="p-space-xxs text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-32 bg-surface-card/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-full bg-status-progress"></span><h1 class="font-headline-sm text-headline-sm text-on-surface">Website Redesign Q4</h1></div><span class="font-caption text-caption bg-surface-container-high text-primary px-space-xs py-0.5 rounded-full font-semibold">Active Sprint</span><button class="flex items-center gap-space-xxs px-space-xs py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[16px]">person</span><span>งานของฉัน</span></button></div><div class="flex items-center gap-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-60 h-10 pl-9 pr-space-sm bg-surface-bg rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm outline-none focus:bg-surface-card transition-all" placeholder="ค้นหางาน, แท็ก หรือผู้รับผิดชอบ..." type="text"/></div><button class="h-10 px-space-sm bg-surface-card hover:bg-surface-container-low text-on-surface rounded-lg flex items-center gap-space-xxs font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">tune</span><span>ตัวกรอง</span></button><div class="flex items-center -space-x-2 pl-space-xs"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-caption text-caption text-primary font-bold ring-2 ring-surface-card">NT</div><div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-caption text-caption text-on-secondary-fixed font-bold ring-2 ring-surface-card">PK</div><div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center font-caption text-caption text-on-tertiary-fixed font-bold ring-2 ring-surface-card">+4</div></div><button class="h-10 px-space-md bg-secondary-container hover:bg-secondary text-on-secondary rounded-lg flex items-center gap-space-xxs font-label-md text-label-md shadow-sm transition-all transform active:scale-95" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>เพิ่มงานใหม่</span></button></div></div><div class="h-16 px-space-lg flex items-end"><nav class="flex gap-space-lg" data-active-classes="text-primary font-title-md border-b-2 border-primary"><a class="pb-space-xs text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-space-xxs" data-path="kanban-board" href="#"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span>บอร์ดคันบัน (Kanban)</span></a><a class="pb-space-xs text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-space-xxs" data-path="list-view" href="#"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span><span>รายการงาน (List)</span></a><a class="pb-space-xs text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-space-xxs" data-path="timeline-view" href="#"><span class="material-symbols-outlined text-[18px]">timeline</span><span>ไทม์ไลน์ (Timeline)</span></a><a aria-current="page" class="pb-space-xs transition-colors flex items-center gap-space-xxs text-primary font-title-md border-b-2 border-primary" data-path="gantt-chart" href="#"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span>แผนภูมิแกนต์ (Gantt)</span></a></nav></div></header><main class="relative pt-32 w-full px-gutter-desktop min-h-screen"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Interactive View Header & Timeline Metrics -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Title & Sprint Progress summary -->
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">แผนงานภาพรวม (Gantt Chart)</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<span class="font-caption text-caption text-on-surface-variant font-medium">ความคืบหน้ารวม</span>
+<span class="font-label-md text-label-md text-status-progress font-bold">58%</span>
+<div class="w-24 h-2 bg-surface-container-highest rounded-full overflow-hidden ml-1">
+<div class="bg-status-progress h-full rounded-full transition-all duration-500" style="width: 58%"></div>
+</div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant bg-surface-card px-space-xs py-0.5 rounded shadow-sm">
+          กันยายน - ตุลาคม 2025
+        </span>
+</div>
+<!-- Controls: Today anchor, Zoom presets, Search & Legend -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center bg-surface-card rounded-lg p-0.5 shadow-sm">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-all" id="btn-view-week" type="button">
+            มุมมองสัปดาห์ (Week)
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" id="btn-view-month" type="button">
+            มุมมองเดือน (Month)
+          </button>
+</div>
+<button class="h-9 px-space-sm bg-surface-card hover:bg-surface-container-low text-on-surface rounded-lg flex items-center gap-space-xxs font-label-md text-label-md shadow-sm transition-colors" id="btn-jump-today" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">flag</span>
+<span>วันนี้ (22 ก.ย.)</span>
+</button>
+<div class="h-6 w-px bg-border-subtle mx-space-xxs"></div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="เลื่อนซ้าย" class="w-9 h-9 flex items-center justify-center bg-surface-card hover:bg-surface-container text-on-surface-variant rounded-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="เลื่อนขวา" class="w-9 h-9 flex items-center justify-center bg-surface-card hover:bg-surface-container text-on-surface-variant rounded-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Legend Ribbon -->
+<div class="flex items-center gap-space-md text-on-surface-variant overflow-x-auto py-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-done"></span>
+<span class="font-caption text-caption">เสร็จสิ้น (Done)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-progress"></span>
+<span class="font-caption text-caption">กำลังดำเนินการ (In Progress)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-todo"></span>
+<span class="font-caption text-caption">รอดำเนินการ (To Do)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-status-overdue"></span>
+<span class="font-caption text-caption text-status-overdue font-semibold">เส้นมาร์กเกอร์วันนี้ (Today Line)</span>
+</div>
+</div>
+</div>
+<!-- Gantt Split-View Canvas -->
+<div class="w-full bg-surface-card rounded-xl shadow-md overflow-hidden flex flex-col">
+<!-- Split Scroll Container -->
+<div class="w-full overflow-x-auto relative flex select-none">
+<!-- LEFT PANE: Task Table with fixed headers (sticky on horizontal table scroll) -->
+<div class="w-[520px] min-w-[520px] shrink-0 bg-surface-card z-20 flex flex-col shadow-[4px_0_12px_-4px_rgba(0,0,0,0.06)]">
+<!-- Table Column Headers -->
+<div class="h-14 bg-surface-container-low flex items-center px-space-sm font-label-md text-label-md text-on-surface-variant tracking-wide">
+<div class="w-[230px] shrink-0 pl-space-xs flex items-center gap-space-xxs">
+<span>ชื่องาน (WBS / Task)</span>
+</div>
+<div class="w-[85px] shrink-0 text-center">สถานะ</div>
+<div class="w-[75px] shrink-0 text-center">ผู้รับผิดชอบ</div>
+<div class="w-[70px] shrink-0 text-center">ระยะเวลา</div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs">ความคืบหน้า</div>
+</div>
+<!-- Left Table Task Rows -->
+<div class="flex flex-col">
+<!-- Parent 1: UI/UX Redesign -->
+<div class="h-12 flex items-center px-space-sm bg-surface-container-high/40 hover:bg-surface-container-high/70 transition-colors cursor-pointer group" onclick="toggleGroup('grp-1')">
+<div class="w-[230px] shrink-0 flex items-center gap-1 min-w-0 pr-2">
+<span class="material-symbols-outlined text-[20px] text-primary transition-transform" id="icon-grp-1">keyboard_arrow_down</span>
+<span class="font-title-md text-title-md text-on-surface truncate font-semibold">1. งานออกแบบ UI/UX</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container text-status-progress px-2 py-0.5 rounded-full font-semibold">
+                In progress
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex items-center justify-center gap-1">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Nut T.">NT</div>
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Praew K.">PK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              12-26 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-md text-label-md text-status-progress font-bold">
+              75%
+            </div>
+</div>
+<!-- Child 1.1 Wireframe -->
+<div class="grp-1-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-done"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">1.1 ออกแบบ Wireframe</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-lowest text-status-done px-2 py-0.5 rounded font-medium shadow-sm">
+                Done
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Nut T.">NT</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              12-16 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-done font-bold">
+              100%
+            </div>
+</div>
+<!-- Child 1.2 Hi-Fi Screen 4 Views -->
+<div class="grp-1-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-done"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">1.2 ออกแบบ Hi-Fi Screen 4 Views</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-lowest text-status-done px-2 py-0.5 rounded font-medium shadow-sm">
+                Done
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Praew K.">PK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              16-22 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-done font-bold">
+              100%
+            </div>
+</div>
+<!-- Child 1.3 Design System & Guidelines -->
+<div class="grp-1-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-progress"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">1.3 Design System & CI Guidelines</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-high text-primary px-2 py-0.5 rounded font-medium">
+                In progress
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Nut T.">NT</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              20-26 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-progress font-bold">
+              50%
+            </div>
+</div>
+<!-- Parent 2: Backend & Auth -->
+<div class="h-12 flex items-center px-space-sm bg-surface-container-high/40 hover:bg-surface-container-high/70 transition-colors cursor-pointer group" onclick="toggleGroup('grp-2')">
+<div class="w-[230px] shrink-0 flex items-center gap-1 min-w-0 pr-2">
+<span class="material-symbols-outlined text-[20px] text-primary transition-transform" id="icon-grp-2">keyboard_arrow_down</span>
+<span class="font-title-md text-title-md text-on-surface truncate font-semibold">2. งานพัฒนาระบบ Backend & Auth</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container text-status-progress px-2 py-0.5 rounded-full font-semibold">
+                In progress
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex items-center justify-center gap-1">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Somchai D.">SD</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-caption text-caption font-bold" title="Bank K.">BK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              15-30 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-md text-label-md text-status-progress font-bold">
+              66%
+            </div>
+</div>
+<!-- Child 2.1 Schema & Migrations -->
+<div class="grp-2-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-done"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">2.1 Schema & Migrations</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-lowest text-status-done px-2 py-0.5 rounded font-medium shadow-sm">
+                Done
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Somchai D.">SD</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              15-19 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-done font-bold">
+              100%
+            </div>
+</div>
+<!-- Child 2.2 Row Level Security (RLS) -->
+<div class="grp-2-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-progress"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">2.2 Row Level Security (RLS)</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-high text-primary px-2 py-0.5 rounded font-medium">
+                In progress
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-caption text-caption font-bold" title="Bank K.">BK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              20-27 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-progress font-bold">
+              60%
+            </div>
+</div>
+<!-- Child 2.3 Supabase SSR Integration -->
+<div class="grp-2-row h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-todo"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">2.3 Supabase SSR Integration</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-low text-status-todo px-2 py-0.5 rounded font-medium">
+                To do
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Somchai D.">SD</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              25-30 ก.ย.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-on-surface-variant font-bold">
+              0%
+            </div>
+</div>
+<!-- Parent 3: Frontend Components (Collapsed by default) -->
+<div class="h-12 flex items-center px-space-sm bg-surface-container-high/40 hover:bg-surface-container-high/70 transition-colors cursor-pointer group" onclick="toggleGroup('grp-3')">
+<div class="w-[230px] shrink-0 flex items-center gap-1 min-w-0 pr-2">
+<span class="material-symbols-outlined text-[20px] text-primary -rotate-90 transition-transform" id="icon-grp-3">keyboard_arrow_down</span>
+<span class="font-title-md text-title-md text-on-surface truncate font-semibold">3. งานพัฒนา Frontend Components</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container text-status-progress px-2 py-0.5 rounded-full font-semibold">
+                In progress
+              </span>
+</div>
+<div class="w-[75px] shrink-0 flex items-center justify-center gap-1">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-bold" title="Nut T.">NT</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-caption text-caption font-bold" title="Bank K.">BK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">
+              22 ก.ย.-10 ต.ค.
+            </div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-md text-label-md text-status-progress font-bold">
+              30%
+            </div>
+</div>
+<!-- Child 3.1 & 3.2 (Hidden initially due to collapsed state) -->
+<div class="grp-3-row hidden h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-progress"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">3.1 Atomic UI Component Library</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-high text-primary px-2 py-0.5 rounded font-medium">In progress</span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-bold">NT</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">22-29 ก.ย.</div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-status-progress font-bold">45%</div>
+</div>
+<div class="grp-3-row hidden h-11 flex items-center px-space-sm bg-surface-card hover:bg-surface-container-low transition-colors">
+<div class="w-[230px] shrink-0 flex items-center gap-2 pl-7 min-w-0 pr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-todo"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">3.2 View Responsive Layouts</span>
+</div>
+<div class="w-[85px] shrink-0 flex justify-center">
+<span class="font-caption text-caption bg-surface-container-low text-status-todo px-2 py-0.5 rounded font-medium">To do</span>
+</div>
+<div class="w-[75px] shrink-0 flex justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-caption text-caption font-bold">BK</div>
+</div>
+<div class="w-[70px] shrink-0 text-center font-caption text-caption text-on-surface-variant">30 ก.ย.-10 ต.ค.</div>
+<div class="w-[60px] shrink-0 text-right pr-space-xs font-label-sm text-label-sm text-on-surface-variant font-bold">0%</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Synchronized Timeline & Gantt Duration Bars -->
+<!-- Calendar covers from 11 ก.ย. to 10 ต.ค. (30 days total). Day width: 44px. Total timeline width: 1320px -->
+<div class="w-[1320px] min-w-[1320px] relative bg-surface-card overflow-hidden" id="timeline-scroll-area">
+<!-- TIMELINE HEADER: Month & Day Columns -->
+<div class="h-14 bg-surface-container-low flex flex-col justify-between border-b-0 select-none">
+<!-- Top Month Tier -->
+<div class="h-6 flex items-center px-space-sm bg-surface-container/60 font-caption text-caption font-bold text-on-surface-variant tracking-wider uppercase">
+<span class="w-[880px]">กันยายน 2025 (September)</span>
+<span class="w-[440px]">ตุลาคม 2025 (October)</span>
+</div>
+<!-- Bottom Day Units (44px per day) -->
+<div class="h-8 flex">
+<!-- 11 to 30 Sep (20 days) -->
+<!-- 11 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พฤ</span><span class="font-semibold text-on-surface">11</span></div>
+<!-- 12 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>ศ</span><span class="font-semibold text-on-surface">12</span></div>
+<!-- 13 (Sat) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>ส</span><span>13</span></div>
+<!-- 14 (Sun) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>อา</span><span>14</span></div>
+<!-- 15 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>จ</span><span class="font-semibold text-on-surface">15</span></div>
+<!-- 16 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>อ</span><span class="font-semibold text-on-surface">16</span></div>
+<!-- 17 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พ</span><span class="font-semibold text-on-surface">17</span></div>
+<!-- 18 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พฤ</span><span class="font-semibold text-on-surface">18</span></div>
+<!-- 19 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>ศ</span><span class="font-semibold text-on-surface">19</span></div>
+<!-- 20 (Sat) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>ส</span><span>20</span></div>
+<!-- 21 (Sun) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>อา</span><span>21</span></div>
+<!-- 22 TODAY --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold shadow-inner"><span>จ</span><span class="text-label-md">22</span></div>
+<!-- 23 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>อ</span><span class="font-semibold text-on-surface">23</span></div>
+<!-- 24 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พ</span><span class="font-semibold text-on-surface">24</span></div>
+<!-- 25 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พฤ</span><span class="font-semibold text-on-surface">25</span></div>
+<!-- 26 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>ศ</span><span class="font-semibold text-on-surface">26</span></div>
+<!-- 27 (Sat) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>ส</span><span>27</span></div>
+<!-- 28 (Sun) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>อา</span><span>28</span></div>
+<!-- 29 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>จ</span><span class="font-semibold text-on-surface">29</span></div>
+<!-- 30 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>อ</span><span class="font-semibold text-on-surface">30</span></div>
+<!-- 1 to 10 Oct (10 days) -->
+<!-- 1 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พ</span><span class="font-semibold text-on-surface">1</span></div>
+<!-- 2 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พฤ</span><span class="font-semibold text-on-surface">2</span></div>
+<!-- 3 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>ศ</span><span class="font-semibold text-on-surface">3</span></div>
+<!-- 4 (Sat) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>ส</span><span>4</span></div>
+<!-- 5 (Sun) --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant/60 font-caption text-caption bg-surface-container-low/80"><span>อา</span><span>5</span></div>
+<!-- 6 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>จ</span><span class="font-semibold text-on-surface">6</span></div>
+<!-- 7 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>อ</span><span class="font-semibold text-on-surface">7</span></div>
+<!-- 8 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พ</span><span class="font-semibold text-on-surface">8</span></div>
+<!-- 9 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>พฤ</span><span class="font-semibold text-on-surface">9</span></div>
+<!-- 10 --> <div class="w-[44px] shrink-0 flex flex-col items-center justify-center text-on-surface-variant font-caption text-caption"><span>ศ</span><span class="font-semibold text-on-surface">10</span></div>
+</div>
+</div>
+<!-- TIMELINE GRID BACKGROUND & BARS CONTAINER -->
+<div class="relative flex flex-col">
+<!-- Background Weekend Stripes & Column Dividers (Absolute Underlay) -->
+<div class="absolute inset-0 flex pointer-events-none z-0">
+<!-- Day 1-30 column backgrounds -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 13 Sat -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 14 Sun -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 20 Sat -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 21 Sun -->
+<div class="w-[44px] h-full shrink-0 border-r border-secondary-fixed/50 bg-secondary-fixed/10"></div> <!-- 22 Mon TODAY -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 27 Sat -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 28 Sun -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 4 Oct Sat -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30 bg-surface-container-low/30"></div> <!-- 5 Oct Sun -->
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0 border-r border-border-subtle/30"></div>
+<div class="w-[44px] h-full shrink-0"></div>
+</div>
+<!-- TODAY VERTICAL MARKER LINE (Col 11 is 22 Sep: 11 * 44 = 484px + 22px center = 506px) -->
+<div class="absolute top-0 bottom-0 left-[506px] w-[2px] bg-status-overdue z-30 pointer-events-none shadow-sm flex flex-col items-center" id="today-marker">
+<div class="w-3 h-3 rounded-full bg-status-overdue -mt-1 ring-2 ring-surface-card"></div>
+</div>
+<!-- ROW 1: UI/UX Parent Bar (12 to 26 Sep: Day index 1 to 15 -> 14 days duration = 616px width. Left = 1 * 44 = 44px) -->
+<div class="h-12 relative z-10 flex items-center">
+<div class="absolute left-[44px] w-[660px] h-7 bg-surface-container-highest rounded-lg overflow-hidden flex items-center shadow-sm border border-primary/20 group cursor-pointer hover:shadow-md transition-all">
+<!-- Progress fill (75%) -->
+<div class="h-full bg-status-progress flex items-center justify-between px-3 text-on-primary font-label-sm text-label-sm font-semibold rounded-l-lg" style="width: 75%;">
+<span class="truncate">UI/UX Design Phase</span>
+<span>75%</span>
+</div>
+<div class="flex-1 px-2 font-caption text-caption text-on-surface-variant truncate">
+                12 ก.ย. - 26 ก.ย.
+              </div>
+</div>
+</div>
+<!-- Child 1.1 Wireframe (12 - 16 ก.ย.: Left: 44px, Duration: 5 days = 220px, 100% Done) -->
+<div class="grp-1-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[44px] w-[220px] h-6 bg-status-done text-on-primary rounded-md shadow-sm flex items-center justify-between px-2.5 font-label-sm text-label-sm transition-transform hover:scale-[1.02] cursor-pointer" title="Wireframe: เสร็จสิ้น 100%">
+<span class="truncate font-medium">1.1 Wireframe</span>
+<span class="font-bold">100%</span>
+</div>
+</div>
+<!-- Child 1.2 Hi-Fi Screen 4 Views (16 - 22 ก.ย.: Left: 44*5 = 220px, Duration: 6 days = 264px, 100% Done) -->
+<div class="grp-1-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[220px] w-[264px] h-6 bg-status-done text-on-primary rounded-md shadow-sm flex items-center justify-between px-2.5 font-label-sm text-label-sm transition-transform hover:scale-[1.02] cursor-pointer" title="Hi-Fi Screen: เสร็จสิ้น 100%">
+<span class="truncate font-medium">1.2 Hi-Fi Screens</span>
+<span class="font-bold">100%</span>
+</div>
+</div>
+<!-- Child 1.3 Design System & Guidelines (20 - 26 ก.ย.: Left: 44*9 = 396px, Duration: 6 days = 264px, 50% In progress) -->
+<div class="grp-1-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[396px] w-[264px] h-6 bg-surface-container rounded-md overflow-hidden shadow-sm border border-status-progress/30 flex items-center transition-transform hover:scale-[1.02] cursor-pointer" title="Design System: ดำเนินการ 50%">
+<div class="h-full bg-status-progress flex items-center px-2 text-on-primary font-label-sm text-label-sm font-semibold rounded-l-sm" style="width: 50%;">
+<span class="truncate">50%</span>
+</div>
+<span class="font-caption text-caption text-primary pl-2 truncate font-medium">1.3 Guidelines</span>
+</div>
+</div>
+<!-- ROW 2: Backend & Auth Parent Bar (15 - 30 ก.ย.: Left: 44*4 = 176px, Duration: 15 days = 660px, Progress: 66%) -->
+<div class="h-12 relative z-10 flex items-center">
+<div class="absolute left-[176px] w-[704px] h-7 bg-surface-container-highest rounded-lg overflow-hidden flex items-center shadow-sm border border-primary/20 group cursor-pointer hover:shadow-md transition-all">
+<div class="h-full bg-status-progress flex items-center justify-between px-3 text-on-primary font-label-sm text-label-sm font-semibold rounded-l-lg" style="width: 66%;">
+<span class="truncate">Backend & Auth Core</span>
+<span>66%</span>
+</div>
+<div class="flex-1 px-2 font-caption text-caption text-on-surface-variant truncate">
+                15 ก.ย. - 30 ก.ย.
+              </div>
+</div>
+</div>
+<!-- Child 2.1 Schema & Migrations (15 - 19 ก.ย.: Left: 176px, Duration: 4 days = 176px, 100% Done) -->
+<div class="grp-2-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[176px] w-[176px] h-6 bg-status-done text-on-primary rounded-md shadow-sm flex items-center justify-between px-2 font-label-sm text-label-sm transition-transform hover:scale-[1.02] cursor-pointer" title="Schema & Migrations: เสร็จสิ้น 100%">
+<span class="truncate font-medium">2.1 Schemas</span>
+<span class="font-bold">100%</span>
+</div>
+</div>
+<!-- Child 2.2 Row Level Security (RLS) (20 - 27 ก.ย.: Left: 44*9 = 396px, Duration: 7 days = 308px, 60% Progress) -->
+<div class="grp-2-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[396px] w-[308px] h-6 bg-surface-container rounded-md overflow-hidden shadow-sm border border-status-progress/30 flex items-center transition-transform hover:scale-[1.02] cursor-pointer" title="RLS Policy: ดำเนินการ 60%">
+<div class="h-full bg-status-progress flex items-center px-2 text-on-primary font-label-sm text-label-sm font-semibold rounded-l-sm" style="width: 60%;">
+<span class="truncate">2.2 RLS</span>
+</div>
+<span class="font-caption text-caption text-primary pl-2 truncate font-medium">60%</span>
+</div>
+</div>
+<!-- Child 2.3 Supabase SSR Integration (25 - 30 ก.ย.: Left: 44*14 = 616px, Duration: 5 days = 220px, 0% To Do) -->
+<div class="grp-2-row h-11 relative z-10 flex items-center">
+<div class="absolute left-[616px] w-[220px] h-6 bg-surface-container-low border border-dashed border-status-todo/60 text-status-todo rounded-md shadow-sm flex items-center justify-between px-2 font-label-sm text-label-sm transition-transform hover:scale-[1.02] cursor-pointer" title="Supabase SSR: รอดำเนินการ">
+<span class="truncate font-medium">2.3 SSR Supabase</span>
+<span class="font-caption text-caption font-semibold">0%</span>
+</div>
+</div>
+<!-- ROW 3: Frontend Parent Bar (22 ก.ย. - 10 ต.ค.: Left: 44*11 = 484px, Duration: 18 days = 792px, Progress: 30%) -->
+<div class="h-12 relative z-10 flex items-center">
+<div class="absolute left-[484px] w-[792px] h-7 bg-surface-container-highest rounded-lg overflow-hidden flex items-center shadow-sm border border-primary/20 group cursor-pointer hover:shadow-md transition-all">
+<div class="h-full bg-status-progress flex items-center justify-between px-3 text-on-primary font-label-sm text-label-sm font-semibold rounded-l-lg" style="width: 30%;">
+<span class="truncate">Frontend Components</span>
+<span>30%</span>
+</div>
+<div class="flex-1 px-2 font-caption text-caption text-on-surface-variant truncate">
+                22 ก.ย. - 10 ต.ค.
+              </div>
+</div>
+</div>
+<!-- Child 3.1 & 3.2 (Collapsed row bars matching left side) -->
+<div class="grp-3-row hidden h-11 relative z-10 flex items-center">
+<div class="absolute left-[484px] w-[308px] h-6 bg-surface-container rounded-md overflow-hidden shadow-sm border border-status-progress/30 flex items-center">
+<div class="h-full bg-status-progress flex items-center px-2 text-on-primary font-label-sm text-label-sm font-semibold" style="width: 45%;">
+<span class="truncate">3.1 Atomic UI</span>
+</div>
+<span class="font-caption text-caption text-primary pl-2 font-medium">45%</span>
+</div>
+</div>
+<div class="grp-3-row hidden h-11 relative z-10 flex items-center">
+<div class="absolute left-[792px] w-[440px] h-6 bg-surface-container-low border border-dashed border-status-todo/60 text-status-todo rounded-md shadow-sm flex items-center justify-between px-2 font-label-sm text-label-sm">
+<span class="truncate">3.2 View Responsive Layouts</span>
+<span class="font-caption text-caption">0%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart Footer / Mini Status & Metadata Panel -->
+<div class="h-12 bg-surface-container-low px-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm font-caption text-caption text-on-surface-variant">
+<span>แสดงผล 3 งานหลัก (8 งานย่อย)</span>
+<span class="text-border-subtle">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-status-done">check_circle</span>
+          งานเสร็จสิ้นแล้ว 3 งาน
+        </span>
+<span class="text-border-subtle">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-status-progress">sync</span>
+          กำลังทำ 3 งาน
+        </span>
+<span class="text-border-subtle">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-status-todo">hourglass_empty</span>
+          รอดำเนินการ 2 งาน
+        </span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>คลิกที่หัวข้องานเพื่อย่อ / ขยายรายละเอียด</span>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Collapsing, Smooth Scrolling & Zoom Toggling -->
+<script>
+    function toggleGroup(grpId) {
+      const rows = document.querySelectorAll('.' + grpId + '-row');
+      const icon = document.getElementById('icon-' + grpId);
+      let isHidden = false;
+      rows.forEach(row => {
+        if (row.classList.contains('hidden')) {
+          row.classList.remove('hidden');
+          isHidden = false;
+        } else {
+          row.classList.add('hidden');
+          isHidden = true;
+        }
+      });
+      if (icon) {
+        if (isHidden) {
+          icon.classList.add('-rotate-90');
+        } else {
+          icon.classList.remove('-rotate-90');
+        }
+      }
+    }
+
+    // Scroll to Today button interaction
+    const btnToday = document.getElementById('btn-jump-today');
+    const scrollContainer = document.querySelector('.overflow-x-auto');
+    if (btnToday && scrollContainer) {
+      btnToday.addEventListener('click', () => {
+        // Today line is at offset 506px inside timeline; center with respect to table pane
+        const targetScroll = 440;
+        scrollContainer.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Zoom buttons toggle visual state
+    const btnWeek = document.getElementById('btn-view-week');
+    const btnMonth = document.getElementById('btn-view-month');
+    if (btnWeek && btnMonth) {
+      btnWeek.addEventListener('click', () => {
+        btnWeek.className = 'px-space-sm py-1.5 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-all';
+        btnMonth.className = 'px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all';
+      });
+      btnMonth.addEventListener('click', () => {
+        btnMonth.className = 'px-space-sm py-1.5 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-all';
+        btnWeek.className = 'px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all';
+      });
+    }
+  </script>
+</div></main></div></body></html>
