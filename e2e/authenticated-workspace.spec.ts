@@ -34,6 +34,17 @@ test.describe("authenticated workspace", () => {
     await expect(page.locator("[data-nextjs-dialog]")).toHaveCount(0);
   });
 
+  test("shows the signed-in user's profile without exposing password data", async ({ page }) => {
+    await login(page);
+    await page.getByRole("link", { name: "โปรไฟล์ของฉัน" }).first().click();
+
+    await expect(page.getByRole("heading", { name: "โปรไฟล์ของฉัน" })).toBeVisible();
+    await expect(page.getByLabel("ชื่อที่แสดง")).toBeVisible();
+    await expect(page.getByLabel("อีเมล")).toHaveValue(email!);
+    await expect(page.getByLabel("รหัสผ่านปัจจุบัน")).toHaveValue("");
+    await expect(page.getByLabel("รหัสผ่านใหม่", { exact: true })).toHaveValue("");
+  });
+
   test("creates one shared task, verifies every view, and soft-deletes it", async ({ page }) => {
     test.skip(!allowMutations || !mutationProjectId, "Set E2E_ALLOW_MUTATIONS=true and E2E_PROJECT_ID to opt into disposable task mutations.");
     await login(page);

@@ -3,8 +3,8 @@
 import { CalendarDays, CircleCheck, LoaderCircle, MailPlus, Shield, Trash2, UserRound, X } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { addMemberByEmail, changeMemberRole, removeMember } from "@/app/members/actions";
-import type { MemberOption, WorkspaceRole } from "@/lib/types";
+import { changeMemberRole, removeMember } from "@/app/members/actions";
+import type { MemberActionResult, MemberOption, WorkspaceRole } from "@/lib/types";
 
 const roleLabels: Record<WorkspaceRole, string> = {
   admin: "ผู้ดูแล",
@@ -39,6 +39,8 @@ export function MemberManagement({
   const router = useRouter();
   const [members, setMembers] = useState(initialMembers);
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [role, setRole] = useState<WorkspaceRole>("member");
   const [notice, setNotice] = useState<{ type: "error" | "success"; text: string } | null>(null);
   const [busyId, setBusyId] = useState("");
@@ -63,19 +65,45 @@ export function MemberManagement({
         joinedAt: new Date().toISOString(),
       }]);
       setEmail("");
+      setPassword("");
+      setConfirmPassword("");
       setNotice({ type: "success", text: "เพิ่มสมาชิกในโหมดตัวอย่างแล้ว" });
       return;
     }
 
     startTransition(async () => {
-      const result = await addMemberByEmail(workspaceId, normalizedEmail, role);
+      const submittedPassword = password;
+      const submittedConfirmation = confirmPassword;
+      setPassword("");
+      setConfirmPassword("");
+
+      const response = await fetch("/api/members", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          workspaceId,
+          email: normalizedEmail,
+          password: submittedPassword,
+          confirmPassword: submittedConfirmation,
+          role,
+        }),
+      });
+      const isJson = response.headers.get("content-type")?.includes("application/json");
+      const result: MemberActionResult = isJson
+        ? await response.json()
+        : { ok: false, error: "Session หมดอายุ กรุณาเข้าสู่ระบบใหม่" };
       if (!result.ok || !result.member) {
         setNotice({ type: "error", text: result.error || "เพิ่มสมาชิกไม่สำเร็จ" });
         return;
       }
       setMembers((current) => [...current, result.member!]);
       setEmail("");
-      setNotice({ type: "success", text: "เพิ่มสมาชิกเข้า Workspace แล้ว" });
+      setNotice({
+        type: "success",
+        text: result.createdAccount
+          ? "สร้างบัญชีและเพิ่มสมาชิกเข้า Workspace แล้ว"
+          : "เพิ่มบัญชีเดิมเข้า Workspace แล้ว โดยไม่ได้เปลี่ยนรหัสผ่านเดิม",
+      });
       router.refresh();
     });
   };
@@ -139,17 +167,21 @@ export function MemberManagement({
         <form className="member-invite workspace-panel" onSubmit={(event) => { event.preventDefault(); addMember(); }}>
           <div className="member-invite-copy">
             <span className="member-invite-icon"><MailPlus size={20} /></span>
-            <div><strong>เพิ่มสมาชิกด้วยอีเมล</strong><small>ผู้ใช้ต้องสมัครบัญชีในระบบแล้ว</small></div>
+            <div><strong>สร้างบัญชีสมาชิก</strong><small>Admin กำหนดอีเมล รหัสผ่านเริ่มต้น และสิทธิ์ให้ผู้ใช้</small></div>
           </div>
           <label className="sr-only" htmlFor="member-email">อีเมลสมาชิก</label>
           <input id="member-email" className="text-input" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="name@company.com" required />
+          <label className="sr-only" htmlFor="member-password">รหัสผ่านเริ่มต้น</label>
+          <input id="member-password" className="text-input" type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="รหัสผ่านเริ่มต้น" autoComplete="new-password" minLength={8} maxLength={128} required />
+          <label className="sr-only" htmlFor="member-confirm-password">ยืนยันรหัสผ่านเริ่มต้น</label>
+          <input id="member-confirm-password" className="text-input" type="password" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} placeholder="ยืนยันรหัสผ่าน" autoComplete="new-password" minLength={8} maxLength={128} required />
           <label className="sr-only" htmlFor="member-role">บทบาท</label>
           <select id="member-role" className="select-input" value={role} onChange={(event) => setRole(event.target.value as WorkspaceRole)}>
             <option value="member">สมาชิก</option>
             <option value="guest">Guest</option>
             <option value="admin">ผู้ดูแล</option>
           </select>
-          <button className="primary-button blue" type="submit" disabled={isPending || !email.trim()}>
+          <button className="primary-button blue" type="submit" disabled={isPending || !email.trim() || password.length < 8 || confirmPassword.length < 8}>
             {isPending ? <LoaderCircle className="spin" size={17} /> : <MailPlus size={17} />} เพิ่มสมาชิก
           </button>
         </form>

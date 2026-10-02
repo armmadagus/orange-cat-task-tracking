@@ -28,3 +28,11 @@ test("protected project routes preserve the return URL at every supported breakp
 
   await expect(page.locator("[data-nextjs-dialog]")).toHaveCount(0);
 });
+
+test("profile remains behind the mandatory login gate", async ({ page }) => {
+  await page.goto("/profile");
+
+  await expect(page).toHaveURL(/\/login\?next=%2Fprofile/);
+  await expect(page.locator('input[name="next"]')).toHaveValue("/profile");
+  await expect(page.getByRole("heading", { name: "เข้าสู่พื้นที่ทำงาน" })).toBeVisible();
+});
