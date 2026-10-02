@@ -373,7 +373,7 @@ a { color: inherit; text-decoration: none; }
 .gantt-spacer { width: 100%; }
 .gantt-empty { min-height: 250px; padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; color: var(--muted); text-align: center; }
 .gantt-empty strong { color: var(--ink); }
-.member-invite { margin-bottom: 14px; padding: 14px; display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(220px, 1fr) 135px auto; align-items: center; gap: 10px; }
+.member-invite { margin-bottom: 14px; padding: 14px; display: grid; grid-template-columns: minmax(220px, 1.2fr) repeat(3, minmax(170px, 1fr)) 125px auto; align-items: center; gap: 10px; }
 .member-invite-copy { min-width: 0; display: flex; align-items: center; gap: 10px; }
 .member-invite-copy div { min-width: 0; }
 .member-invite-copy strong, .member-invite-copy small { display: block; }
@@ -398,6 +398,23 @@ a { color: inherit; text-decoration: none; }
 .member-actions { width: 58px; text-align: center; }
 .danger-icon { color: #b91c1c; }
 .danger-icon:hover { background: #fff1f1; color: #991b1b; }
+.profile-page { max-width: 1080px; }
+.profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.profile-card { overflow: hidden; }
+.profile-card-heading { min-height: 104px; padding: 20px 22px; display: flex; align-items: flex-start; gap: 13px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #fff, #fbfcff); }
+.profile-card-heading h2 { margin: 0; font-size: 19px; }
+.profile-card-heading p { margin: 4px 0 0; color: var(--ink-soft); }
+.profile-card-icon { width: 42px; height: 42px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 11px; background: var(--blue-soft); color: var(--blue); }
+.profile-card-icon.orange { background: #fff0de; color: #a95300; }
+.profile-form { padding: 22px; display: grid; gap: 18px; }
+.profile-readonly { background: var(--surface-soft); color: var(--ink-soft); cursor: not-allowed; }
+.profile-password-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.profile-security-note { min-height: 42px; padding: 10px 12px; display: flex; align-items: center; gap: 9px; border: 1px solid #c8d9ff; border-radius: 10px; background: var(--blue-soft); color: var(--blue-dark); font-size: 12px; }
+.profile-security-note svg { flex: 0 0 auto; }
+.profile-message { margin: 0; padding: 10px 12px; border: 1px solid; border-radius: 9px; }
+.profile-message.success { border-color: #a7f3d0; background: #ecfdf5; color: #047857; }
+.profile-message.error { border-color: #fecaca; background: #fff1f1; color: #b91c1c; }
+.profile-form-actions { display: flex; justify-content: flex-end; }
 .form-page { max-width: 720px; margin: 0 auto; }
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow-1); padding: 26px; }
 .form-card h1 { margin: 0; font-size: 26px; }
@@ -454,10 +471,11 @@ a { color: inherit; text-decoration: none; }
   .account-row { justify-content: center; }
   .workspace-switcher { justify-content: center; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-grid { grid-template-columns: 1fr; }
   .summary-strip { grid-template-columns: repeat(3, minmax(160px, 1fr)); overflow-x: auto; }
   .task-list { overflow-x: auto; }
   .task-row { min-width: 900px; }
-  .member-invite { grid-template-columns: 1fr 1fr 130px; }
+  .member-invite { grid-template-columns: 1fr 1fr; }
   .member-invite-copy { grid-column: 1 / -1; }
   .kanban-board { grid-template-columns: repeat(3, 290px); }
   .timeline-date-editor { grid-template-columns: 1fr 1fr; }
@@ -597,6 +615,10 @@ a { color: inherit; text-decoration: none; }
   .member-table .member-permission { grid-column: 1 / -1; }
   .member-actions { position: absolute; top: 8px; right: 8px; width: auto; }
   .member-identity { padding-right: 34px; }
+  .profile-card-heading { min-height: 0; padding: 17px 16px; }
+  .profile-form { padding: 17px 16px; }
+  .profile-password-grid { grid-template-columns: 1fr; }
+  .profile-form-actions .primary-button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

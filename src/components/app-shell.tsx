@@ -2,6 +2,7 @@
 
 import {
   BriefcaseBusiness,
+  CircleUserRound,
   ChevronDown,
   LayoutGrid,
   LogOut,
@@ -96,6 +97,13 @@ export function AppShell({
           >
             <Users size={18} /> สมาชิกทีม
           </Link>
+          <Link
+            href="/profile"
+            className={`nav-item ${pathname === "/profile" ? "active" : ""}`}
+            onClick={() => setSidebarOpen(false)}
+          >
+            <CircleUserRound size={18} /> โปรไฟล์ของฉัน
+          </Link>
           <span className="nav-item disabled" aria-disabled="true">
             <Settings size={18} /> ตั้งค่าเวิร์กสเปซ
           </span>
@@ -126,10 +134,10 @@ export function AppShell({
 
         <div className="account-row">
           <Initials name={data.user.displayName} />
-          <span className="account-copy">
+          <Link href="/profile" className="account-copy" onClick={() => setSidebarOpen(false)}>
             <strong>{data.user.displayName}</strong>
             <small>{data.workspace.role}</small>
-          </span>
+          </Link>
           {onSignOut && (
             <form action={onSignOut}>
               <button className="icon-button" type="submit" aria-label="ออกจากระบบ">

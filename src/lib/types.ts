@@ -30,6 +30,13 @@ export type MemberOption = {
   joinedAt?: string;
 };
 
+export type MemberActionResult = {
+  ok: boolean;
+  error?: string;
+  member?: MemberOption;
+  createdAccount?: boolean;
+};
+
 export type TaskRecord = {
   id: string;
   projectId: string;
